@@ -38,7 +38,7 @@
             cy="0"
             r="16.666666666666668"
             fill="none"
-            stroke="#005a73"
+            stroke="#680457"
             stroke-width="4"
             stroke-dasharray="52.35987755982989 52.35987755982989"
           >
@@ -59,7 +59,7 @@
             cy="0"
             r="25"
             fill="none"
-            stroke="#690456"
+            stroke="#ffffff"
             stroke-width="4"
             stroke-dasharray="78.53981633974483 78.53981633974483"
           >
@@ -80,7 +80,7 @@
             cy="0"
             r="33.333333333333336"
             fill="none"
-            stroke="#006a95"
+            stroke="#680457"
             stroke-width="4"
             stroke-dasharray="104.71975511965978 104.71975511965978"
           >
@@ -138,7 +138,7 @@
             cy="0"
             r="8.333333333333334"
             fill="none"
-            stroke="#ffffff"
+            stroke="#680457"
             stroke-width="4"
             stroke-dasharray="26.179938779914945 26.179938779914945"
           >
@@ -159,7 +159,7 @@
             cy="0"
             r="16.666666666666668"
             fill="none"
-            stroke="#005a73"
+            stroke="#ffffff"
             stroke-width="4"
             stroke-dasharray="52.35987755982989 52.35987755982989"
           >
@@ -180,7 +180,7 @@
             cy="0"
             r="25"
             fill="none"
-            stroke="#690456"
+            stroke="#680457"
             stroke-width="4"
             stroke-dasharray="78.53981633974483 78.53981633974483"
           >
@@ -201,7 +201,7 @@
             cy="0"
             r="33.333333333333336"
             fill="none"
-            stroke="#006a95"
+            stroke="#ffffff"
             stroke-width="4"
             stroke-dasharray="104.71975511965978 104.71975511965978"
           >
@@ -222,7 +222,7 @@
             cy="0"
             r="41.666666666666664"
             fill="none"
-            stroke="#ffffff"
+            stroke="#680457"
             stroke-width="4"
             stroke-dasharray="130.89969389957471 130.89969389957471"
           >
@@ -2034,7 +2034,7 @@ export default {
     },
   data() {
     return {
-      spinnerType: "slow"
+      
     };
   }
 };
