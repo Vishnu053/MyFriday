@@ -19,3 +19,19 @@ export default {
     },
 };
 </script>
+<style>
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #fff0; 
+}
+ 
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: violet; 
+}
+</style>

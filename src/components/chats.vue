@@ -24,6 +24,12 @@
 
 <script>
 export default {
+    props:{
+        newMessage:{
+            type:String,
+            default:""
+        }
+    },
   data() {
     return {
       dwdth: 0,
@@ -72,6 +78,13 @@ export default {
       ],
       outbox:[]
     };
+  },
+  watch:{
+      newMessage(NewValue,OldValue){
+          if(NewValue!=""){
+              this.chatBody.push({message:NewValue,isSystem:false})
+          }
+      }
   },
   mounted() {
     this.dwdth = window.innerHeight - 300 + "px";
