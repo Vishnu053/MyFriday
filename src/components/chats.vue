@@ -36,45 +36,45 @@ export default {
       outMessage:"",
       chatBody:[
           {
-              message:"hello",
-              isSystem:false
-          },
-          {
-              message:"I'm sorry, but what does that mean?",
+              message:"hey boss!",
               isSystem:true
           },
-          {
-              message:"It is a greeting",
-              isSystem:false
-          },
-          {
-              message:"Understood! Hello is a greeting.",
-              isSystem:true
-          },
-          {
-              message:"**Started learning all kinds of greetings from the internet**",
-              isSystem:true
-          },
-          {
-              message:"**Learning greetings (50% done)**",
-              isSystem:true
-          },
-          {
-              message:"Hello Friday",
-              isSystem:false
-          },
-          {
-              message:"Hi! How are you?",
-              isSystem:true
-          },
-          {
-              message:"**Learning greetings (80% done)**",
-              isSystem:true
-          },
-          {
-              message:"**Learning greetings (complete)**",
-              isSystem:true
-          },
+        //   {
+        //       message:"I'm sorry, but what does that mean?",
+        //       isSystem:true
+        //   },
+        //   {
+        //       message:"It is a greeting",
+        //       isSystem:false
+        //   },
+        //   {
+        //       message:"Understood! Hello is a greeting.",
+        //       isSystem:true
+        //   },
+        //   {
+        //       message:"**Started learning all kinds of greetings from the internet**",
+        //       isSystem:true
+        //   },
+        //   {
+        //       message:"**Learning greetings (50% done)**",
+        //       isSystem:true
+        //   },
+        //   {
+        //       message:"Hello Friday",
+        //       isSystem:false
+        //   },
+        //   {
+        //       message:"Hi! How are you?",
+        //       isSystem:true
+        //   },
+        //   {
+        //       message:"**Learning greetings (80% done)**",
+        //       isSystem:true
+        //   },
+        //   {
+        //       message:"**Learning greetings (complete)**",
+        //       isSystem:true
+        //   },
       ],
       outbox:[]
     };

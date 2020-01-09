@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <v-layout text-center wrap class="col-12 row">
-      <mainLogo class="col-7 animated fadeIn slower" :spinnerType="sType"></mainLogo>
+    <v-layout text-center wrap class="col-12 row" @click="startDictationMode()">
+      <mainLogo class="col-7 animated fadeIn slower" :spinnerType="sType" @click="startDictationMode()"></mainLogo>
       <div class="col-5" style="padding-top: 5.5em;">
         <span class="font-weight-light" style="font-size: 2.1em;">
           FRIDAY
@@ -29,18 +29,20 @@ export default {
     sType: "slow",
     listener: "",
     addMessage: "",
-    isOffline: true
+    isOffline: true,
+    UserDictation:""
   }),
   mounted() {
     this.setCommands();
+      
   },
   methods: {
     startListening() {
       const artyom = new Artyom();
-      artyom.say("Hi boss! I'm booted up and running.");
-      setTimeout(() => {
-        this.isOffline = false;
-      }, 1000);
+      // artyom.say("Hi boss! I'm booted up and running.");
+      // setTimeout(() => {
+      //   this.isOffline = false;
+      // }, 1000);
       // function startContinuousArtyom(){
       artyom.fatality(); // use this to stop any of
 
@@ -48,10 +50,10 @@ export default {
         // if you use artyom.fatality , wait 250 ms to initialize again.
         artyom
           .initialize({
-            lang: "en-GB", // A lot of languages are supported. Read the docs !
-            continuous: true, // Artyom will listen forever
+            lang: "en-IN", // A lot of languages are supported. Read the docs !
+            continuous: false, // Artyom will listen forever
             listen: true, // Start recognizing
-            debug: true, // Show everything in the console
+            debug: false, // Show everything in the console
             speed: 1 // talk normally
           })
           .then(function() {
@@ -115,14 +117,52 @@ export default {
               artyom.say("Never is too late to do something my friend !");
             }
           }
+        },
+        {
+        indexes:["Stop dictation", "Dictation stop"],
+        action(i){
+          this.UserDictation.stop();
+        }
         }
       ];
 
       artyom.addCommands(myGroup);
+      artyom.say("Hey boss! I'm booted up and running.");
       setTimeout(() => {
-        this.startListening();
+        this.isOffline = false;
       }, 1000);
+      setTimeout(() => {
+        // this.startListening();
+        this.startDictationMode()
+      }, 1000);
+    },
+    
+    startDictationMode(){
+      // alert("hi")
+      const artyom = new Artyom()
+      if(this.UserDictation!=""){this.UserDictation.stop();}
+      var self=this
+      this.UserDictation = artyom.newDictation({
+    continuous:false, // Enable continuous if HTTPS connection
+    onResult:function(text){
+        // Do something with the text
+        // console.log(text);
+        self.addMessage=text
+    },
+    onStart:function(){
+        console.log("Dictation started by the user");
+    },
+    onEnd:function(){
+        console.log("Dictation stopped by the user");
     }
+});
+
+this.UserDictation.start();
+
+// Stop whenever you want
+// UserDictation.stop();
+    }
+
   }
 };
 </script>
