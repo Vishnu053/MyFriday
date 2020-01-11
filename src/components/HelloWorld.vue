@@ -140,13 +140,13 @@ export default {
     startDictationMode(){
       // alert("hi")
       const artyom = new Artyom()
-      if(this.UserDictation!=""){this.UserDictation.stop();}
+      // if(this.UserDictation!=""){this.UserDictation.stop();}
       var self=this
       this.UserDictation = artyom.newDictation({
     continuous:false, // Enable continuous if HTTPS connection
     onResult:function(text){
         // Do something with the text
-        // console.log(text);
+        console.log(text);
         self.addMessage=text
     },
     onStart:function(){
